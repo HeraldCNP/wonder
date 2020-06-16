@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Category;
+use App\Count;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ValidWorkForm;
 use App\User;
@@ -71,6 +72,9 @@ class WorkController extends Controller
         $work->user_id = auth()->user()->id;
         $work->save();
         $work->syncUsers($request->get('users'));
+        $count = Count::findorfail(1);
+        $count->proyects = $count->proyects + 1;
+        $count->update();
         Alert::success('Hecho', 'Trabajo Creado Correctamente');
         return redirect('works');
     }

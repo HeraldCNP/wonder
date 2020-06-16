@@ -14,15 +14,15 @@
 .sfCloser:hover:after, .sfCloser:hover:before, .close-popup:hover:after, .close-popup:hover:before, .showit, .common_btn.red_bg:after, .testimonial_content .testi_icon,
 .lbi_details .learnM:after
 {
-    background: #540ec0;
+    background: #00f584;
 }
 .singlefolio:after{
-    background: rgba(84, 14, 192, 0.8);
+    background: rgba(64, 0, 237, 0.8);
 
 }
 .single_wedo .overlay_wedo:after,
 .singleTM .tm_overlay:after{
-    background: rgba(84, 14, 192, 0.8);
+    background: rgba(64, 0, 237, 0.8);
 }
 .ready{
     background: url(../../images/bg/4_2.jpg) no-repeat center center / cover;
@@ -45,10 +45,10 @@
 }
 
 .subtitulo{
-    color: #1b0149;
+    color: #00f584;
 }
 .titulo{
-    color: #ff005c;
+    color: #00f584;
 }
 /*video*/
 #video {
@@ -61,5 +61,9 @@
     visibility: visible;
 }
 
+
+.teamIcons{
+    font-size: 25px;
+}
 
 

@@ -25,7 +25,7 @@
             </div>
             <div class="row mt_30">
                 <div class="col-lg-12 text-center">
-                    <a class="common_btn red_bg" href="{{ route('trabajos') }}"><span>Load More</span></a>
+                    <a class="common_btn red_bg" href="{{ route('trabajos') }}"><span>Ver más</span></a>
                 </div>
             </div>
         </div>

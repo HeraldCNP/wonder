@@ -6,15 +6,16 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Somos una agencia de Marketing y Publicidad Digital creando un trabajo de calidad, rápido, y agradable a los sentidos. WonderGroup Ideas que impactan"/>
-    <meta name="keywords" content="sis414, tecnologias emergentes, uatf, Auxiliatura">
+    <meta name="keywords" content="wonder group, wonder , agencia de publicidad ,agencia de marketing, wonder.com.bo ,www.wonder.com.bo">
     <meta name="author" content="HeraldCNP">
-    <meta property="og:url" content="https://sis414uatf.000webhostapp.com/" />
+    <meta property="og:url" content="https://wonder.com.bo" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Wonder Group | Agencia de Marketing y publicidad" />
     <meta property="og:description"
           content="Somos una agencia de Marketing y Publicidad Digital creando un trabajo de calidad, rápido, y agradable a los sentidos. WonderGroup Ideas que impactan" />
-    <meta property="og:image" content="https://sis414uatf.000webhostapp.com/images/fondo.jpg" />
+    <meta property="og:image" content="{{ asset('images/wonderlogo.png') }}" />
     <!-- Include All CSS here-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.carousel.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.theme.css') }}"/>
@@ -51,9 +52,9 @@
     @include('partials.nav')
 <!-- END MENU -->
 
-<!-- Revolution SLIDER -->
-    @include('partials.slide')
-<!-- Revolution Slider -->
+{{--<!-- Revolution SLIDER -->--}}
+{{--    @include('partials.slide')--}}
+{{--<!-- Revolution Slider -->--}}
 
 @yield('content')
 

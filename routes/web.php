@@ -40,6 +40,7 @@ Route::group(['
         Route::resource('/role', 'RoleController')->names('role');
         Route::resource('/works', 'WorkController');
         Route::resource('/companies', 'CompanyController');
+        Route::resource('/counts', 'CountController')->except('destroy', 'show', 'store', 'create');
         Route::resource('usuarios', 'UserController');
         Route::get('/dashboard', 'AdminController@index')->name('dashboard');
     });

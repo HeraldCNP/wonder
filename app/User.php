@@ -46,4 +46,15 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\Work');
     }
+
+    public function scopeAllowed($query)
+    {
+        if (auth()->user()->can('view', $this)){
+            return $query;
+        }
+        else{
+            return $query->where('id', auth()->id());
+        }
+
+    }
 }

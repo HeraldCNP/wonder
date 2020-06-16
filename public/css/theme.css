@@ -102,7 +102,7 @@ License URI:
 }
 .mainmenu ul > li.active > a,
 .mainmenu ul li a:hover{
-    color: #ff005c;
+    color: #00f584;
 }
 .mainmenu ul > li.active > a:after,
 .mainmenu ul li a:hover:after{

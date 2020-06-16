@@ -2,6 +2,20 @@
 
 @section('content')
 
+    <!-- Page Banner -->
+    <section class="pageBanner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner_content text-center">
+                        <h4><a href="#">home</a> - Services</h4>
+                        <h2>Services</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Banner -->
 
     <!-- Services Details Section -->
     <section class="commonSection service_detail">
@@ -9,8 +23,7 @@
             <div class="row">
                 <div class="col-lg-8 col-sm-8">
                     <div class="serviceArea">
-                        <img src="images/s1.jpg" alt=""/>
-                        <h2>Diseño y desarrollo Web</h2>
+                        <h2>Graphic Designing</h2>
                         <p>
                             Need something changed or is there something not quite working the way you envisaged? Is your van a
                             little old and tired and need refreshing? Lorem Ipsum is simply dummy text of the printing and

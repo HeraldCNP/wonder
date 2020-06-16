@@ -1,19 +1,29 @@
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169236178-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169236178-1');
+    </script>
+
     <meta charset="UTF-8">
     <title>Wonder Group | Agencia de Marketing y publicidad</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Somos una agencia de Marketing y Publicidad Digital creando un trabajo de calidad, rápido, y agradable a los sentidos. WonderGroup Ideas que impactan"/>
-    <meta name="keywords" content="sis414, tecnologias emergentes, uatf, Auxiliatura">
+    <meta name="description" content="Agencia de marketing digital y publicidad en Bolivia enfocada en desarrollar estrategias digitales modernas e innovadoras para hacer crecer tu negocio"/>
+    <meta name="keywords" content="wonder group, wonder, marketing, marketing digital, publicidad, bolivia, agencia de publicidad ,agencia de marketing digital,wonder.com.bo ,www.wonder.com.bo">
     <meta name="author" content="HeraldCNP">
-    <meta property="og:url" content="https://sis414uatf.000webhostapp.com/" />
+    <meta property="og:url" content="https://wonder.com.bo" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Wonder Group | Agencia de Marketing y publicidad" />
     <meta property="og:description"
-          content="Somos una agencia de Marketing y Publicidad Digital creando un trabajo de calidad, rápido, y agradable a los sentidos. WonderGroup Ideas que impactan" />
-    <meta property="og:image" content="https://sis414uatf.000webhostapp.com/images/fondo.jpg" />
+          content="Agencia de marketing digital y publicidad en Bolivia enfocada en desarrollar estrategias digitales modernas e innovadoras para hacer crecer tu negocio"/>
+    <meta property="og:image" content="{{ asset('images/wonderlogo.png') }}" />
     <!-- Include All CSS here-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}"/>
@@ -34,6 +44,7 @@
 
     <!-- Favicon Icon -->
     <link rel="icon"  type="image/png" href="{{ asset('images/favicon.svg') }}">
+    <script data-ad-client="ca-pub-7125877501142047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
 <!-- Preloading -->
@@ -82,9 +93,9 @@
 @include('partials.clientes')
 <!-- Clientes END Section -->
 
-<!-- Testimonial Section -->
-@include('partials.testimonio')
-<!-- Testimonial END Section -->
+{{--<!-- Testimonial Section -->--}}
+{{--@include('partials.testimonio')--}}
+{{--<!-- Testimonial END Section -->--}}
 
 
 

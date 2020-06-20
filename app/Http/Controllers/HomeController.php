@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Company;
 use App\Count;
 use App\Work;
@@ -26,7 +27,9 @@ class HomeController extends Controller
 
     public function works()
     {
-        return view('pages.works');
+        $categories = Category::all();
+        $works = Work::where('status', 'yes')->orderBy('created_at', 'desc')->take(9)->get();
+        return view('pages.works', compact('categories', 'works'));
     }
     public function web()
     {

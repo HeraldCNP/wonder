@@ -57,7 +57,7 @@ class CompanyController extends Controller
 
         Storage::disk('company')->put($fileName, File::get($file));
 
-        $ruta = 'uploads/companies/'.$fileName;
+        $ruta = 'storage/companies/'.$fileName;
         $company = new Company();
         $company->name = $request->name;
         $company->description = $request->description;
@@ -115,7 +115,7 @@ class CompanyController extends Controller
 
         Storage::disk('company')->put($fileName, File::get($file));
 
-        $ruta = 'uploads/companies/'.$fileName;
+        $ruta = 'storage/companies/'.$fileName;
         $company->name = $request->name;
         $company->description = $request->description;
         $company->image = $ruta;

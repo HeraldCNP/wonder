@@ -15,7 +15,7 @@
                             <a href="{{ route('inicio') }}">Inicio</a>
                         </li>
                         <li class="scroll menu-item-has-children">
-                            <a href="#service">Servicios</a>
+                            <a href="#">Servicios</a>
                             <ul class="sub-menu">
                                 <li><a href="{{ route('web') }}">Desarrollo Web</a></li>
                                 <li><a href="{{ route('desing') }}">Diseño Gráfico</a></li>
@@ -25,11 +25,11 @@
                                 <li><a href="{{ route('audio') }}">Producción de Audio</a></li>
                             </ul>
                         </li>
-                        <li class="scroll"><a href="#portfolio">Portafolio</a>
+                        <li class="scroll"><a href="{{ route('trabajos') }}">Portafolio</a>
                         </li>
 
-                        <li class="scroll"><a href="#team">Team</a></li>
-                        <li class="scroll"><a href="#contact">Contacto</a></li>
+                        <li class="scroll"><a href="#">Team</a></li>
+                        <li class="scroll"><a href="#">Contacto</a></li>
                     </ul>
                 </nav>
             </div>

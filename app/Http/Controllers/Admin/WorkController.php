@@ -62,7 +62,7 @@ class WorkController extends Controller
 
         Storage::disk('public')->put($fileName, File::get($file));
 
-        $ruta = 'uploads/works/'.$fileName;
+        $ruta = 'storage/works/'.$fileName;
         $work = new Work();
         $work->title = $request->title;
         $work->description = $request->description;
@@ -130,7 +130,7 @@ class WorkController extends Controller
 
         Storage::disk('public')->put($fileName, File::get($file));
 
-        $ruta = 'uploads/works/'.$fileName;
+        $ruta = 'storage/works/'.$fileName;
         $work->title = $request->title;
         $work->description = $request->description;
         $work->image = $ruta;

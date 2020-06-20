@@ -1,10 +1,19 @@
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169236178-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169236178-1');
+    </script>
     <meta charset="UTF-8">
     <title>Wonder Group | Agencia de Marketing y publicidad</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Somos una agencia de Marketing y Publicidad Digital creando un trabajo de calidad, rápido, y agradable a los sentidos. WonderGroup Ideas que impactan"/>
     <meta name="keywords" content="wonder group, wonder , agencia de publicidad ,agencia de marketing, wonder.com.bo ,www.wonder.com.bo">
     <meta name="author" content="HeraldCNP">
@@ -34,6 +43,8 @@
 
     <!-- Favicon Icon -->
     <link rel="icon"  type="image/png" href="{{ asset('images/favicon.svg') }}">
+{{--    <script data-ad-client="ca-pub-7125877501142047" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>--}}
+    @laravelPWA
 </head>
 <body>
 <!-- Preloading -->
@@ -52,9 +63,9 @@
     @include('partials.nav')
 <!-- END MENU -->
 
-{{--<!-- Revolution SLIDER -->--}}
+<!-- Revolution SLIDER -->
 {{--    @include('partials.slide')--}}
-{{--<!-- Revolution Slider -->--}}
+<!-- Revolution Slider -->
 
 @yield('content')
 
@@ -71,21 +82,21 @@
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/modernizr.custom.js') }}"></script>
-{{--<script src="{{ asset('js/gmaps.js') }}"></script>--}}
-{{--<script src="https://maps.google.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>--}}
+
+
 <script src="{{ asset('js/jquery.themepunch.revolution.min.js') }}"></script>
 <script src="{{ asset('js/jquery.themepunch.tools.min.js') }}"></script>
-<!-- Rev slider Add on Start -->
-<script src="{{ asset('js/extensions/revolution.extension.actions.min.js') }}"></script>
-<script src="{{ asset('js/extensions/revolution.extension.carousel.min.js') }}"></script>
-<script src="{{ asset('js/extensions/revolution.extension.kenburn.min.js') }}"></script>
-<script src="{{ asset('js/extensions/revolution.extension.migration.min.js') }}"></script>
-<script src="{{ asset('js/extensions/revolution.extension.parallax.min.js') }}"></script>
-<script src="{{ asset('js/extensions/revolution.extension.slideanims.min.js') }}"></script>
-<script src="{{ asset('js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
-<script src="{{ asset('js/extensions/revolution.extension.navigation.min.js') }}"></script>
-<script src="{{ asset('js/extensions/revolution.extension.video.min.js') }}"></script>
-<!-- Rev slider Add on End -->
+{{--<!-- Rev slider Add on Start -->--}}
+{{--<script src="{{ asset('js/extensions/revolution.extension.actions.min.js') }}"></script>--}}
+{{--<script src="{{ asset('js/extensions/revolution.extension.carousel.min.js') }}"></script>--}}
+{{--<script src="{{ asset('js/extensions/revolution.extension.kenburn.min.js') }}"></script>--}}
+{{--<script src="{{ asset('js/extensions/revolution.extension.migration.min.js') }}"></script>--}}
+{{--<script src="{{ asset('js/extensions/revolution.extension.parallax.min.js') }}"></script>--}}
+{{--<script src="{{ asset('js/extensions/revolution.extension.slideanims.min.js') }}"></script>--}}
+{{--<script src="{{ asset('js/extensions/revolution.extension.layeranimation.min.js') }}"></script>--}}
+{{--<script src="{{ asset('js/extensions/revolution.extension.navigation.min.js') }}"></script>--}}
+{{--<script src="{{ asset('js/extensions/revolution.extension.video.min.js') }}"></script>--}}
+{{--<!-- Rev slider Add on End -->--}}
 <script src="{{ asset('js/dlmenu.js') }}"></script>
 <script src="{{ asset('js/jquery.magnific-popup.js') }}"></script>
 <script src="{{ asset('js/mixer.js') }}"></script>

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+
+Route::get('storage-link', function (){
+    Artisan::call('storage:link');
+});
+
 Route::get('/', 'HomeController@index')->name('inicio');
 Route::get('/trabajos', 'HomeController@works')->name('trabajos');
 Route::get('/desarrollo-web', 'HomeController@web')->name('web');
@@ -28,7 +34,9 @@ Route::get('/fotografia-profesional', 'HomeController@photo')->name('photo');
 Route::get('/edicion-de-video', 'HomeController@video')->name('video');
 Route::get('/edicion-de-audio', 'HomeController@audio')->name('audio');
 
-
+Route::get('/offline', function () {
+    return view('modules/laravelpwa/offline');
+});
 
 Route::group(['
         prefix' => 'Admin',

@@ -288,7 +288,7 @@ License URI:
 / 3. Services Section
 ------------------------------------------------------*/
 .service_section{
-    background: url(../images/bg/1.jpg) no-repeat center center / cover;
+    background-color: #4000ed;
 }
 .icon_box_1{
     display: inline-block;
@@ -310,7 +310,7 @@ License URI:
 .icon_box_1 .front i {
     font-size: 64px;
     line-height: 1;
-    color: #aaaaaa;
+    color: #ffffff;
     display: block;
     margin-bottom: 17px;
     transition: all ease 400ms;
@@ -323,7 +323,7 @@ License URI:
     line-height: 20px;
     font-weight: 400;
     text-transform: uppercase;
-    color: #aaaaaa;
+    color: #ffffff;
     margin: 0;
     transition: all ease 400ms;
     -moz-transition: all ease 400ms;
@@ -376,7 +376,7 @@ License URI:
     -ms-transform: rotateY(0deg);
     background: transparent;
     z-index: 2;
-    border: 2px solid rgba(27, 27, 27, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
     padding: 48px 45px 45px;
     width: 100%;
 }
@@ -667,7 +667,7 @@ License URI:
     position: relative;
     padding-top: 113px;
 }
-.singlefunfact h1{
+.singlefunfact h4{
     font-size: 60px;
     line-height: 1;
     letter-spacing: 2.4px;
@@ -971,7 +971,7 @@ License URI:
     display: inline-block;
 }
 .singleClient a img {
-    max-width: 119px;
+    max-width: 200px;
     height: auto;
     position: absolute;
     left: 0;
@@ -3202,7 +3202,10 @@ textarea.input-form:focus{
 / 28. preloder
 ------------------------------------------------------*/
 .preloader {
-    background: #000;
+    background-color: #000;
+    background-image: url("../images/wonderlogo.png");
+    background-repeat: no-repeat;
+    background-position: top center;
     bottom: 0;
     height: 100%;
     left: 0;
@@ -3212,7 +3215,7 @@ textarea.input-form:focus{
     width: 100%;
     z-index: 99999;
 }
-.la-ball-circus,.la-ball-circus>div{position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.la-ball-circus,.la-ball-circus>div{position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 .la-ball-circus{display:block;font-size:0;color:#fff}
 .la-ball-circus.la-dark{color:#FFF}
 .la-ball-circus>div{display:inline-block;float:none;background-color:currentColor;border:0 solid currentColor}

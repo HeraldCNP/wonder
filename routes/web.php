@@ -27,12 +27,12 @@ Route::get('storage-link', function (){
 
 Route::get('/', 'HomeController@index')->name('inicio');
 Route::get('/trabajos', 'HomeController@works')->name('trabajos');
-Route::get('/desarrollo-web', 'HomeController@web')->name('web');
-Route::get('/diseño-grafico', 'HomeController@desing')->name('desing');
-Route::get('/marketing-digital', 'HomeController@marketing')->name('marketing');
-Route::get('/fotografia-profesional', 'HomeController@photo')->name('photo');
-Route::get('/edicion-de-video', 'HomeController@video')->name('video');
-Route::get('/edicion-de-audio', 'HomeController@audio')->name('audio');
+Route::get('/desarrollo-web', 'HomeController@web')->name('desarrollo-web');
+Route::get('/diseño-grafico', 'HomeController@desing')->name('diseno-grafico');
+Route::get('/marketing-digital', 'HomeController@marketing')->name('marketing-digital');
+Route::get('/fotografia-profesional', 'HomeController@photo')->name('fotografia');
+Route::get('/produccion-de-video', 'HomeController@video')->name('produccion-de-video');
+Route::get('/produccion-de-audio', 'HomeController@audio')->name('produccion-de-audio');
 
 Route::get('/offline', function () {
     return view('modules/laravelpwa/offline');

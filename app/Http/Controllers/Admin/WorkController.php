@@ -11,10 +11,13 @@ use App\Work;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Collection;
+use Intervention\Image\Facades\Image;
+
 class WorkController extends Controller
 {
     /**
@@ -24,7 +27,7 @@ class WorkController extends Controller
      */
     public function index()
     {
-        $works = Work::orderBy('title')->get();
+        $works = Work::allowed()->orderBy('title')->paginate(15);
         return view('admin.works.index', compact('works'));
     }
 
@@ -48,25 +51,31 @@ class WorkController extends Controller
      */
     public function store(ValidWorkForm $request)
     {
+        if ($request->image){
+            $file = $request->file('image');
+            $fName = $file->getClientOriginalName();
+            $fileExtension = $file->getClientOriginalExtension();
+            if($fileExtension == "png" || $fileExtension == "jpg"){
+                $fiName = Str::slug(Str::of($fName)->substr(0, -3), '-');
+            }elseif ($fileExtension == "jpeg"){
+                $fiName = Str::slug(Str::of($fName)->substr(0, -4), '-');
+            }
+            $fileName = $fiName.'.'.$fileExtension;
 
-        $file = $request->file('image');
 
-        $fName = $file->getClientOriginalName();
-        $fileExtension = $file->getClientOriginalExtension();
-        if($fileExtension == "png" || $fileExtension == "jpg"){
-            $fiName = Str::slug(Str::of($fName)->substr(0, -3), '-');
-        }elseif ($fileExtension == "jpeg"){
-            $fiName = Str::slug(Str::of($fName)->substr(0, -4), '-');
+            Storage::disk('public')->put($fileName, File::get($file));
+            $ruta = 'storage/works/'.$fileName;
+            $img = Image::make($file)->resize(400, 400)->save($ruta,80);
+        }else{
+            $ruta = "";
         }
-        $fileName = $fiName.'.'.$fileExtension;
 
-        Storage::disk('public')->put($fileName, File::get($file));
-
-        $ruta = 'storage/works/'.$fileName;
         $work = new Work();
         $work->title = $request->title;
         $work->description = $request->description;
         $work->image = $ruta;
+        $work->url = $request->url;
+        $work->iframe = $request->iframe;
         $work->status = $request->status;
         $work->category_id = $request->category;
         $work->user_id = auth()->user()->id;
@@ -117,23 +126,30 @@ class WorkController extends Controller
     public function update(ValidWorkForm $request, $id)
     {
         $work = Work::findorfail($id);
-        $file = $request->file('image');
+        if ($request->image) {
+            $file = $request->file('image');
 
-        $fName = $file->getClientOriginalName();
-        $fileExtension = $file->getClientOriginalExtension();
-        if($fileExtension == "png" || $fileExtension == "jpg"){
-            $fiName = Str::slug(Str::of($fName)->substr(0, -3), '-');
-        }elseif ($fileExtension == "jpeg"){
-            $fiName = Str::slug(Str::of($fName)->substr(0, -4), '-');
+            $fName = $file->getClientOriginalName();
+            $fileExtension = $file->getClientOriginalExtension();
+            if ($fileExtension == "png" || $fileExtension == "jpg") {
+                $fiName = Str::slug(Str::of($fName)->substr(0, -3), '-');
+            } elseif ($fileExtension == "jpeg") {
+                $fiName = Str::slug(Str::of($fName)->substr(0, -4), '-');
+            }
+            $fileName = $fiName . '.' . $fileExtension;
+
+            Storage::disk('public')->put($fileName, File::get($file));
+
+            $ruta = 'storage/works/' . $fileName;
+            $img = Image::make($file)->resize(400, 400)->save($ruta,80);
+        }else{
+            $ruta = "";
         }
-        $fileName = $fiName.'.'.$fileExtension;
-
-        Storage::disk('public')->put($fileName, File::get($file));
-
-        $ruta = 'storage/works/'.$fileName;
         $work->title = $request->title;
         $work->description = $request->description;
         $work->image = $ruta;
+        $work->url = $request->url;
+        $work->iframe = $request->iframe;
         $work->status = $request->status;
         $work->category_id = $request->category;
         $work->update();

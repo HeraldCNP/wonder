@@ -86,7 +86,7 @@
                 <div class="tm_overlay">
                     <div class="team_social">
                         <a href="https://www.facebook.com/JoseAndresQE" target="_blank"><i class="fa fa-facebook teamIcons"></i></a>
-                        <a href="https://www.linkedin.com/in/joseandresq" target="_blank"><i class="fa fa-instagram teamIcons"></i></a>
+                        <a href="https://www.instagram.com/joseandres_ph" target="_blank"><i class="fa fa-instagram teamIcons"></i></a>
                         <a href="https://www.behance.net/JoseAndresQ" target="_blank"><i class="fa fa-behance teamIcons"></i></a>
                         <a href="https://www.linkedin.com/in/joseandresq" target="_blank"><i class="fa fa-linkedin teamIcons"></i></a>
                         <a href="https://www.youtube.com/channel/UCuXtLLcgNjAzADHi_EIBOrw" target="_blank"><i class="fa fa-youtube-play teamIcons"></i></a>

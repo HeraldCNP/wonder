@@ -15,16 +15,18 @@
                         Potosí - Bolivia
                     </p>
                     <p>Telefonos: 63719758 - 78715104 - 60523437</p><br>
-                    <p>Email: <a href="#">admin@wonder.com.bo</a></p>
+                    <p>Email: <a href="#">hola@wonder.com.bo</a></p>
                 </aside>
             </div>
             <div class="col-lg-3 col-sm-2 col-md-3">
                 <aside class="widget social_widget">
                     <h3 class="widget_title">Redes Sociales</h3>
                     <ul>
-                        <li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+                        <li><a href="https://www.instagram.com/wondergroup_bo/" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>
                         <li><a href="https://www.facebook.com/wonderpotosi" target="_blank"><i class="fa fa-facebook-square"></i>Facebook</a></li>
-                        <li><a href="#"><i class="fa fa-youtube-play"></i>Youtube</a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play" target="_blank"></i>Youtube</a></li>
+                        <li><a href="https://www.linkedin.com/company/wondergroupbo/"><i class="fa fa-linkedin" target="_blank"></i>Linkedin</a></li>
+                        <li><a href="https://www.behance.net/WonderGroup_bo"><i class="fa fa-behance" target="_blank"></i>Behance</a></li>
                     </ul>
                 </aside>
             </div>

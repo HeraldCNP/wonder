@@ -49,7 +49,15 @@
                                     </small>
                                 @endif
                             </div>
-                            <hr>
+                            <div class="form-group">
+                                <label for="url">URL</label>
+                                <input type="url" class="form-control" id="url" name="url" placeholder="URL" value="{{ old('url') }}">
+                                @if ($errors->has('url'))
+                                    <small class="form-text text-danger">
+                                        {{ $errors->first('url') }}
+                                    </small>
+                                @endif
+                            </div>
 
                         </div>
                         <div class="col-md-4">
@@ -92,6 +100,15 @@
                                         @endforeach
                                     </select>
 
+                            </div>
+                            <div class="form-group">
+                                <label for="url">Audio o Video</label>
+                                <input type="url" class="form-control" id="iframe" name="iframe" placeholder="URL Audio o Video" value="{{ old('iframe') }}">
+                                @if ($errors->has('iframe'))
+                                    <small class="form-text text-danger">
+                                        {{ $errors->first('iframe') }}
+                                    </small>
+                                @endif
                             </div>
                             <hr>
                             <input class="btn btn-info" type="submit" value="Guardar">

@@ -12,7 +12,7 @@
     </script>
 
     <meta charset="UTF-8">
-    <title>Wonder Group | Agencia de Marketing y publicidad</title>
+    <title>Wonder Group - Agencia de Marketing y publicidad</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Agencia de marketing digital y publicidad en Bolivia enfocada en desarrollar estrategias digitales modernas e innovadoras para hacer crecer tu negocio"/>
@@ -81,12 +81,12 @@
                         <li class="scroll menu-item-has-children">
                             <a href="#service">Servicios</a>
                             <ul class="sub-menu">
-                                <li><a href="{{ route('web') }}">Desarrollo Web</a></li>
-                                <li><a href="{{ route('desing') }}">Diseño Gráfico</a></li>
-                                <li><a href="{{ route('marketing') }}">Marketing Digital</a></li>
-                                <li><a href="{{ route('photo') }}">Fotografía</a></li>
-                                <li><a href="{{ route('video') }}">Producción de Video</a></li>
-                                <li><a href="{{ route('audio') }}">Producción de Audio</a></li>
+                                <li><a href="{{ route('diseno-grafico') }}">Diseño Gráfico</a></li>
+                                <li><a href="{{ route('desarrollo-web') }}">Desarrollo Web</a></li>
+                                <li><a href="{{ route('marketing-digital') }}">Marketing Digital</a></li>
+                                <li><a href="{{ route('fotografia') }}">Fotografía</a></li>
+                                <li><a href="{{ route('produccion-de-video') }}">Producción de Video</a></li>
+                                <li><a href="{{ route('produccion-de-audio') }}">Producción de Audio</a></li>
                             </ul>
                         </li>
                         <li class="scroll"><a href="#portfolio">Portafolio</a>
@@ -146,29 +146,23 @@
                 <div class="popup-inner">
                     <div class="dl-menu__wrap dl-menuwrapper">
                         <ul class="dl-menu dl-menuopen">
-                            <li class="scroll menu-item-has-children">
-                                <a href="{{ route('inicio') }}">Inicio</a>
-                                <ul class="dl-submenu">
-                                    <li><a href="index.html">Home 01</a></li>
-                                    <li><a href="index2.html">Home 02</a></li>
-                                    <li><a href="index3.html">Home 03</a></li>
-                                </ul>
-                            </li>
+                            <li class="scroll"><a href="{{ route('inicio') }}">Inicio</a></li>
+
                             <li class="scroll menu-item-has-children">
                                 <a href="#service">Servicios</a>
                                 <ul class="dl-submenu">
-                                    <li><a href="#">Desarrollo Web</a></li>
-                                    <li><a href="#">Diseño Gráfico</a></li>
-                                    <li><a href="#">Marketing Digital</a></li>
-                                    <li><a href="#">Fotografía Profesional</a></li>
-                                    <li><a href="#">Producción de Video</a></li>
-                                    <li><a href="#">Producción de Audio</a></li>
+                                    <li><a href="{{ route('diseno-grafico') }}">Diseño Gráfico</a></li>
+                                    <li><a href="{{ route('desarrollo-web') }}">Desarrollo Web</a></li>
+                                    <li><a href="{{ route('marketing-digital') }}">Marketing Digital</a></li>
+                                    <li><a href="{{ route('fotografia') }}">Fotografía</a></li>
+                                    <li><a href="{{ route('produccion-de-video') }}">Producción de Video</a></li>
+                                    <li><a href="{{ route('produccion-de-audio') }}">Producción de Audio</a></li>
                                 </ul>
                             </li>
                             <li class="scroll menu-item-has-children"><a href="#portfolio">Portafolio</a>
                             </li>
                             <li class="scroll"><a href="#team">Team</a></li>
-                            <li class="scroll"><a href="#contact">Contacto</a></li>
+                            <li class="scroll"><a href="#">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
@@ -178,15 +172,17 @@
             <div class="col-lg-6 col-sm-6 col-xs-12 text-left">
                 <ul class="footer__contacts text-left">
                     <li>Telefonos: 63719758 - 78715104 - 60523437</li>
-                    <li>Email: admin@wondergroup.com.bo</li>
+                    <li>Email: hola@wondergroup.com.bo</li>
                 </ul>
             </div>
             <div class="col-lg-6 col-sm-6 col-xs-12 col-xs-12">
                 <div class="popUp_social text-right">
                     <ul>
-                        <li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
-                        <li><a href="https://www.facebook.com/wonderpotosi"><i class="fa fa-facebook-square"></i>Facebook</a></li>
-                        <li><a href="#"><i class="fa fa-youtube-play"></i>Youtube</a></li>
+                        <li><a href="https://www.instagram.com/wondergroup_bo/" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>
+                        <li><a href="https://www.facebook.com/wonderpotosi" target="_blank"><i class="fa fa-facebook-square"></i>Facebook</a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play" target="_blank"></i>Youtube</a></li>
+                        <li><a href="https://www.linkedin.com/company/wondergroupbo/"><i class="fa fa-linkedin" target="_blank"></i>Linkedin</a></li>
+                        <li><a href="https://www.behance.net/WonderGroup_bo"><i class="fa fa-behance" target="_blank"></i>Behance</a></li>
                     </ul>
                 </div>
             </div>

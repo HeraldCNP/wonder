@@ -12,13 +12,20 @@
             </div>
             <div class="row">
                 @foreach($works as $work)
-                    <div class="col-lg-4 col-sm-6 col-md-4">
+                    <div class="col-md-3 col-sm-1">
                         <div class="singlefolio">
-                            <img src="{{ url($work->image) }}" alt="{{ $work->description }}"/>
-                            <div class="folioHover">
-                                <a class="cate">{{ $work->title }}</a>
-                                <h4>{{ $work->description }}</h4>
-                            </div>
+                            @if($work->iframe === null)
+                                <img src="{{ url($work->image) }}" alt="{{ $work->description }}"/>
+                                <div class="folioHover">
+                                    <a class="{{ $work->url }}">{{ $work->title }}</a>
+                                    <h4>{{ $work->description }}</h4>
+                                </div>
+                            @else
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="{{ $work->iframe }}"></iframe>
+                                </div>
+                            @endif
+
                         </div>
                     </div>
                 @endforeach

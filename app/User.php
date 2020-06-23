@@ -49,7 +49,7 @@ class User extends Authenticatable
 
     public function scopeAllowed($query)
     {
-        if (auth()->user()->can('view', $this)){
+        if (auth()->user()->can('haveAccess', 'user.index')){
             return $query;
         }
         else{

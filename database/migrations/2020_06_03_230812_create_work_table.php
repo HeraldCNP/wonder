@@ -18,6 +18,8 @@ class CreateWorkTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('image');
+            $table->string('iframe')->nullable();
+            $table->string('url')->nullable();
             $table->enum('status', ['yes', 'no'])->nullable();
             $table->foreignId('category_id')
                 ->references('id')

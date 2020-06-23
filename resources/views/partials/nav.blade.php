@@ -17,12 +17,12 @@
                         <li class="scroll menu-item-has-children">
                             <a href="#">Servicios</a>
                             <ul class="sub-menu">
-                                <li><a href="{{ route('web') }}">Desarrollo Web</a></li>
-                                <li><a href="{{ route('desing') }}">Diseño Gráfico</a></li>
-                                <li><a href="{{ route('marketing') }}">Marketing Digital</a></li>
-                                <li><a href="{{ route('photo') }}">Fotografía</a></li>
-                                <li><a href="{{ route('video') }}">Producción de Video</a></li>
-                                <li><a href="{{ route('audio') }}">Producción de Audio</a></li>
+                                <li><a href="{{ route('diseno-grafico') }}">Diseño Gráfico</a></li>
+                                <li><a href="{{ route('desarrollo-web') }}">Desarrollo Web</a></li>
+                                <li><a href="{{ route('marketing-digital') }}">Marketing Digital</a></li>
+                                <li><a href="{{ route('fotografia') }}">Fotografía</a></li>
+                                <li><a href="{{ route('produccion-de-video') }}">Producción de Video</a></li>
+                                <li><a href="{{ route('produccion-de-audio') }}">Producción de Audio</a></li>
                             </ul>
                         </li>
                         <li class="scroll"><a href="{{ route('trabajos') }}">Portafolio</a>
@@ -82,23 +82,16 @@
                 <div class="popup-inner">
                     <div class="dl-menu__wrap dl-menuwrapper">
                         <ul class="dl-menu dl-menuopen">
+                            <li class="scroll"><a href="{{ route('inicio') }}">Inicio</a></li>
                             <li class="scroll menu-item-has-children">
-                                <a href="{{ route('inicio') }}">Inicio</a>
+                                <a href="#">Servicios</a>
                                 <ul class="dl-submenu">
-                                    <li><a href="index.html">Home 01</a></li>
-                                    <li><a href="index2.html">Home 02</a></li>
-                                    <li><a href="index3.html">Home 03</a></li>
-                                </ul>
-                            </li>
-                            <li class="scroll menu-item-has-children">
-                                <a href="#service">Servicios</a>
-                                <ul class="dl-submenu">
-                                    <li><a href="#">Desarrollo Web</a></li>
-                                    <li><a href="#">Diseño Gráfico</a></li>
-                                    <li><a href="#">Marketing Digital</a></li>
-                                    <li><a href="#">Fotografía Profesional</a></li>
-                                    <li><a href="#">Producción de Video</a></li>
-                                    <li><a href="#">Producción de Audio</a></li>
+                                    <li><a href="{{ route('diseno-grafico') }}">Diseño Gráfico</a></li>
+                                    <li><a href="{{ route('desarrollo-web') }}">Desarrollo Web</a></li>
+                                    <li><a href="{{ route('marketing-digital') }}">Marketing Digital</a></li>
+                                    <li><a href="{{ route('fotografia') }}">Fotografía</a></li>
+                                    <li><a href="{{ route('produccion-de-video') }}">Producción de Video</a></li>
+                                    <li><a href="{{ route('produccion-de-audio') }}">Producción de Audio</a></li>
                                 </ul>
                             </li>
                             <li class="scroll menu-item-has-children"><a href="#portfolio">Portafolio</a>

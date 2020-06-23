@@ -72,17 +72,17 @@ class PermissionInfoSeeder extends Seeder
         //Role Admin
 
         $roleAdmin = Role::create([
-            'name' => 'Admin',
-            'slug' => 'admin',
-            'description' => 'Administrator',
+            'name' => 'superAdmin',
+            'slug' => 'superadmin',
+            'description' => 'Super Administrator',
             'full-access' => 'yes'
         ]);
 
         //Role Client
         $roleClient = Role::create([
-            'name' => 'Cliente',
-            'slug' => 'cliente',
-            'description' => 'Cliente de la empresa',
+            'name' => 'Admin',
+            'slug' => 'admin',
+            'description' => 'Administrador de la empresa',
             'full-access' => 'no'
         ]);
 
@@ -171,6 +171,19 @@ class PermissionInfoSeeder extends Seeder
                 'name' => 'Edit own User',
                 'slug' => 'userown.edit',
                 'description' => 'A user can edit own user'
+            ]);
+            $permission_all[] = $permission->id;
+
+            $permission = Permission::create([
+                'name' => 'show Own Work',
+                'slug' => 'workown.show',
+                'description' => 'A user can see own Work'
+            ]);
+            $permission_all[] = $permission->id;
+            $permission = Permission::create([
+                'name' => 'Edit Own Work',
+                'slug' => 'workown.edit',
+                'description' => 'A user can edit own Work'
             ]);
             $permission_all[] = $permission->id;
             /*

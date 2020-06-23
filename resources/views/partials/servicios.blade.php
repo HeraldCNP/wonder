@@ -11,7 +11,7 @@
         </div>
         <div class="row custom_column">
             <div class="col-sm-4 col-md-4">
-                <a href="service_detail.html" class="icon_box_1 text-center">
+                <a href="{{ route('desarrollo-web') }}" class="icon_box_1 text-center">
                     <div class="flipper">
                         <div class="front">
                             <img src="{{ asset('images/iconos/web.svg') }}" alt="" height="100px"">
@@ -25,7 +25,7 @@
                 </a>
             </div>
             <div class="col-sm-4 col-md-4">
-                <a href="service_detail.html" class="icon_box_1 text-center">
+                <a href="{{ route('diseno-grafico') }}" class="icon_box_1 text-center">
                     <div class="flipper">
                         <div class="front">
                             <img src="{{ asset('images/iconos/desing.svg') }}" alt="" height="100px">
@@ -39,7 +39,7 @@
                 </a>
             </div>
             <div class="col-sm-4 col-md-4">
-                <a href="service_detail.html" class="icon_box_1 text-center">
+                <a href="{{ route('marketing-digital') }}" class="icon_box_1 text-center">
                     <div class="flipper">
                         <div class="front">
                             <img src="{{ asset('images/iconos/socialmedia.svg') }}" alt="" height="100px">
@@ -55,7 +55,7 @@
         </div>
         <div class="row custom_column" style="margin-top: 30px">
             <div class="col-sm-4 col-md-4">
-                <a href="service_detail.html" class="icon_box_1 text-center">
+                <a href="{{ route('fotografia') }}" class="icon_box_1 text-center">
                     <div class="flipper">
                         <div class="front">
                             <img src="{{ asset('images/iconos/camera.svg') }}" alt="" height="100px">
@@ -69,7 +69,7 @@
                 </a>
             </div>
             <div class="col-sm-4 col-md-4">
-                <a href="service_detail.html" class="icon_box_1 text-center">
+                <a href="{{ route('produccion-de-video') }}" class="icon_box_1 text-center">
                     <div class="flipper">
                         <div class="front">
                             <img src="{{ asset('images/iconos/video.svg') }}" alt="" height="100px">
@@ -83,7 +83,7 @@
                 </a>
             </div>
             <div class="col-sm-4 col-md-4">
-                <a href="service_detail.html" class="icon_box_1 text-center">
+                <a href="{{ route('produccion-de-audio') }}" class="icon_box_1 text-center">
                     <div class="flipper">
                         <div class="front">
                             <img src="{{ asset('images/iconos/audio.svg') }}" alt="" height="100px">

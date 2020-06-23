@@ -33,4 +33,15 @@ class Work extends Model
         });
         return $this->users()->sync($userIds);
     }
+
+    public function scopeAllowed($query)
+    {
+        if (auth()->user()->can('haveAccess', 'work.index')){
+            return $query;
+        }
+        else{
+            return $query->where('user_id', auth()->id());
+        }
+
+    }
 }

@@ -11,17 +11,17 @@
         gtag('config', 'UA-169236178-1');
     </script>
     <meta charset="UTF-8">
-    <title>Wonder Group | Agencia de Marketing y publicidad</title>
+    <title>Wonder Group - @yield('title')</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="Somos una agencia de Marketing y Publicidad Digital creando un trabajo de calidad, rápido, y agradable a los sentidos. WonderGroup Ideas que impactan"/>
-    <meta name="keywords" content="wonder group, wonder , agencia de publicidad ,agencia de marketing, wonder.com.bo ,www.wonder.com.bo">
+    <meta name="description" content="@yield('description')"/>
+    <meta name="keywords" content="wonder group, wonder , agencia de publicidad ,agencia de marketing, wonder.com.bo ,www.wonder.com.bo", @yield('title')>
     <meta name="author" content="HeraldCNP">
     <meta property="og:url" content="https://wonder.com.bo" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Wonder Group | Agencia de Marketing y publicidad" />
+    <meta property="og:title" content="Wonder Group - @yield('title')" />
     <meta property="og:description"
-          content="Somos una agencia de Marketing y Publicidad Digital creando un trabajo de calidad, rápido, y agradable a los sentidos. WonderGroup Ideas que impactan" />
+          content="@yield('description')" />
     <meta property="og:image" content="{{ asset('images/wonderlogo.png') }}" />
     <!-- Include All CSS here-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}"/>

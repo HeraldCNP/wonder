@@ -18,13 +18,15 @@
 
     <div class="block full" xmlns="http://www.w3.org/1999/html">
         <div class="table-responsive">
-            <a class="btn btn-primary float-right"  href="{{ route('works.create') }}">Create</a> <br><br>
+            <a class="btn btn-primary float-right"  href="{{ route('works.create') }}">Crear Nuevo</a> <br><br>
             <table id="example-datatable" class="table table-center table-condensed table-bordered">
                 <thead>
                 <tr>
                     <th>Título</th>
                     <th>Descripción</th>
                     <th>Imagen</th>
+                    <th>Url</th>
+                    <th>iframe</th>
                     <th>Categoria</th>
                     <th>Estado</th>
                     <th colspan="3">Actions</th>
@@ -36,6 +38,8 @@
                         <td>{{ $work->title }}</td>
                         <td>{{ $work->description }}</td>
                         <td><img src="{{ $work->image }}" width="100px"></td>
+                        <td><a href="{{ $work->url }}" target="_blank">Link</a></td>
+                        <td><a href="{{ $work->iframe }}" target="_blank">Ver</a></td>
                         <td>{{ $work->category->name }}</td>
 
                         <td>
@@ -49,7 +53,7 @@
                             </label>
                         </td>
                         <td>
-                            <a class="btn btn-xs btn-info" href="{{ route('works.show', $work->id) }}" data-toggle="tooltip" title="Ver"><i class="fa fa-eye"></i></a>
+{{--                            <a class="btn btn-xs btn-info" href="{{ route('works.show', $work->id) }}" data-toggle="tooltip" title="Ver"><i class="fa fa-eye"></i></a>--}}
 
                             <a class="btn btn-xs btn-success" href="{{ route('works.edit', $work->id) }}" data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"></i></a>
 
@@ -63,6 +67,9 @@
                 @endforeach
                 </tbody>
             </table>
+            <div class="text-center">
+                {{ $works->links() }}
+            </div>
         </div>
 
 

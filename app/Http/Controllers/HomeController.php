@@ -19,7 +19,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $works = Work::where('status', 'yes')->orderBy('created_at', 'desc')->take(6)->get();
+        $works = Work::where('status', 'yes')->inRandomOrder()->take(4)->get();
         $companies = Company::where('status', 'yes')->orderBy('created_at', 'desc')->take(6)->get();
         $counts = Count::where('id', 1)->get();
         return view('welcome', compact('works', 'companies', 'counts'));
@@ -33,26 +33,32 @@ class HomeController extends Controller
     }
     public function web()
     {
-        return view('pages.web');
+        $categories = Category::inRandomOrder()->get();
+        return view('pages.web', compact('categories'));
     }
     public function desing()
     {
-        return view('pages.desing');
+        $categories = Category::inRandomOrder()->get();
+        return view('pages.desing', compact('categories'));
     }
     public function marketing()
     {
-        return view('pages.marketing');
+        $categories = Category::inRandomOrder()->get();
+        return view('pages.marketing', compact('categories'));
     }
     public function photo()
     {
-        return view('pages.photo');
+        $categories = Category::inRandomOrder()->get();
+        return view('pages.photo', compact('categories'));
     }
     public function video()
     {
-        return view('pages.video');
+        $categories = Category::inRandomOrder()->get();
+        return view('pages.video', compact('categories'));
     }
     public function audio()
     {
-        return view('pages.audio');
+        $categories = Category::inRandomOrder()->get();
+        return view('pages.audio', compact('categories'));
     }
 }

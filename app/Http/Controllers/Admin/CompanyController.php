@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class CompanyController extends Controller
@@ -43,23 +44,28 @@ class CompanyController extends Controller
      */
     public function store(ValidCompanyForm $request)
     {
+        if ($request->image) {
+            $file = $request->file('image');
 
-        $file = $request->file('image');
+            $fName = $file->getClientOriginalName();
+            $fileExtension = $file->getClientOriginalExtension();
+            if ($fileExtension == "png" || $fileExtension == "jpg") {
+                $fiName = Str::slug(Str::of($fName)->substr(0, -3), '-');
+            } elseif ($fileExtension == "jpeg") {
+                $fiName = Str::slug(Str::of($fName)->substr(0, -4), '-');
+            }
+            $fileName = $fiName . '.' . $fileExtension;
 
-        $fName = $file->getClientOriginalName();
-        $fileExtension = $file->getClientOriginalExtension();
-        if($fileExtension == "png" || $fileExtension == "jpg"){
-            $fiName = Str::slug(Str::of($fName)->substr(0, -3), '-');
-        }elseif ($fileExtension == "jpeg"){
-            $fiName = Str::slug(Str::of($fName)->substr(0, -4), '-');
+            Storage::disk('company')->put($fileName, File::get($file));
+
+            $ruta = 'storage/companies/' . $fileName;
+            $img = Image::make($file)->resize(200, 200)->save($ruta,80);
+        }else{
+            $ruta = "";
         }
-        $fileName = $fiName.'.'.$fileExtension;
-
-        Storage::disk('company')->put($fileName, File::get($file));
-
-        $ruta = 'storage/companies/'.$fileName;
         $company = new Company();
         $company->name = $request->name;
+        $company->slug = Str::slug($request->name);
         $company->description = $request->description;
         $company->image = $ruta;
         $company->contact = $request->contact;
@@ -102,20 +108,25 @@ class CompanyController extends Controller
     public function update(ValidCompanyForm $request, $id)
     {
         $company = Company::findorfail($id);
-        $file = $request->file('image');
+        if ($request->image) {
+            $file = $request->file('image');
 
-        $fName = $file->getClientOriginalName();
-        $fileExtension = $file->getClientOriginalExtension();
-        if($fileExtension == "png" || $fileExtension == "jpg"){
-            $fiName = Str::slug(Str::of($fName)->substr(0, -3), '-');
-        }elseif ($fileExtension == "jpeg"){
-            $fiName = Str::slug(Str::of($fName)->substr(0, -4), '-');
+            $fName = $file->getClientOriginalName();
+            $fileExtension = $file->getClientOriginalExtension();
+            if ($fileExtension == "png" || $fileExtension == "jpg") {
+                $fiName = Str::slug(Str::of($fName)->substr(0, -3), '-');
+            } elseif ($fileExtension == "jpeg") {
+                $fiName = Str::slug(Str::of($fName)->substr(0, -4), '-');
+            }
+            $fileName = $fiName . '.' . $fileExtension;
+
+            Storage::disk('company')->put($fileName, File::get($file));
+
+            $ruta = 'storage/companies/' . $fileName;
+            $img = Image::make($file)->resize(200, 200)->save($ruta,80);
+        }else{
+            $ruta = "";
         }
-        $fileName = $fiName.'.'.$fileExtension;
-
-        Storage::disk('company')->put($fileName, File::get($file));
-
-        $ruta = 'storage/companies/'.$fileName;
         $company->name = $request->name;
         $company->description = $request->description;
         $company->image = $ruta;

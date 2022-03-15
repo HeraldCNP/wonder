@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWorkTable extends Migration
+class CreateWorksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateWorkTable extends Migration
      */
     public function up()
     {
-        Schema::create('work', function (Blueprint $table) {
+        Schema::create('works', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('description');
@@ -40,6 +40,6 @@ class CreateWorkTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('work');
+        Schema::dropIfExists('works');
     }
 }

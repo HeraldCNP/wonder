@@ -15,7 +15,7 @@ class CreateUserWorkTable extends Migration
     {
         Schema::create('user_work', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('work_id')->references('id')->on('work')->onDelete('cascade');
+            $table->foreignId('work_id')->references('id')->on('works')->onDelete('cascade');
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
